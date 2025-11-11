@@ -2,7 +2,7 @@ library(dataRetrieval)
 library(dplyr) # for `rename` & `select`
 library(tidyr) # for `gather`
 library(ggplot2)
-setwd('D:/RESEARCH/Suresh')
+setwd('D:/')
 library("readxl")
 #install.packages("gridExtra")
 library("gridExtra")
@@ -12,7 +12,7 @@ library("cowplot")
 library(gridExtra)
 library(ggtext)
 
-cor2 <- read_excel("Shelf life -NBC.xlsx", sheet = 'NH3_Sheet1')
+cor2 <- read_excel("data.xlsx", sheet = 'NH3_Sheet1')
 head(cor2)
 cor2$Period=factor(cor2$Period,levels=c('Zeroth hour'))
 cor2$CT<-factor(cor2$CT,levels=c('Test','Control'),labels=c('Test','Control'))
@@ -71,5 +71,6 @@ gridExtra::grid.arrange(g1, g2,
                                    1, 1, 2, 2, 2, 2, 2),
                                  byrow = TRUE, nrow = 3) 
 )
+
 
 #wi9dth 1500 h 650
